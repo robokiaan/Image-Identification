@@ -1,0 +1,97 @@
+<html>
+
+<head>
+    <title>C103 - C105</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="ml5.js"></script>
+    <script src="webcam.js"></script>
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <br>
+        <br>
+        <center>
+            <div class="part0">
+                <h1 class="heading">Image Recognition</h1>
+                <br>
+                <h3>Trained to identify the following objects:</h3>
+                <br>
+                <h5>Computer Mouse</h5>
+                <hr>
+                <h5>Computer Keyboard</h5>
+                <hr>
+                <h5>Sketchpen</h5>
+                <hr>
+                <h5>Internet Dongle</h5>
+                <hr>
+                <h5>Compass Box</h5>
+            </div>
+            <br>
+            <br>
+            <div class="part1">
+                <label>Webcam</label>
+                <div class="webcam" id="webcam-view" style="width: 360px; height: 250px;"></div>
+                <br>
+                <label>Picture</label>
+                <div class="webcam-picture webcam"></div>
+            </div>
+            <br>
+            <br>
+            <div class="part0">
+                <button onclick="capture_img()" type="reset" class="btn btn-info btn-lg btn-block">Capture
+                    Image</button>
+                <br>
+                <button onclick="identify_img()" type="reset" class="btn btn-success btn-lg btn-block">Identify
+                    Image</button>
+            </div>
+            <br>
+            <br>
+            <div class="part1">
+                <h3 class="object">Object: </h3>
+                <br>
+                <h3 class="accuracy">Accuracy: </h3>
+            </div>
+        </center>
+        <br>
+        <br>
+    </div>
+</body>
+
+</html>
+
+<style>
+    .heading {
+        background-color: black;
+        color: cyan;
+        padding: 10px;
+    }
+
+    .container {
+        margin-bottom: 100px;
+        margin-top: 100px;
+        border: 3px solid black;
+        background-color: black;
+        overflow: hidden;
+    }
+
+    .part0 {
+        background-color: lightgray;
+        padding: 30px 10px;
+        width: 100%;
+    }
+
+    .part1 {
+        background-color: white;
+        padding: 30px 10px;
+        width: 100%;
+    }
+
+    .webcam {
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+    }
+</style>
